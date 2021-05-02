@@ -4,11 +4,10 @@ import { ICartState } from "./types";
 
 const INITIAL_STATE: ICartState = {
   items: [],
+  failedStockCheck: [],
 };
 
 const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
-  // console.log(state, action);
-
   return produce(state, (draft) => {
     switch (action.type) {
       case "ADD_PRODUCT_TO_CART_SUCCESS": {
@@ -30,7 +29,10 @@ const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
         break;
       }
       case "ADD_PRODUCT_TO_CART_FAILURE": {
-        console.log("ADD_PRODUCT_TO_CART_FAILURE", action.payload);
+        const { productId } = action.payload;
+
+        draft.failedStockCheck.push(productId);
+
         break;
       }
       default: {
