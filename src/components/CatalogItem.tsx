@@ -16,7 +16,7 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ product }) => {
   }, [dispatch, product]);
 
   return (
-    <article key={product.id}>
+    <article>
       <strong>{product.title}</strong> {" - "}
       <span>{product.price}</span>{" "}
       <button type="button" onClick={handleAddProductToCart}>
