@@ -7,7 +7,7 @@ const Cart: React.FC = () => {
   const cart = useSelector<IState, ICartItem[]>((state) => state.cart.items);
 
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
           <th>Produto</th>

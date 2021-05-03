@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  background-color: #005e7a;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+}
+
+.catalog {
+  width: 100%;
+  height: 25rem;
+  padding: 1.25rem;
+  margin: 0 auto;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalogBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 12.5rem;
+}
+
+.catalogBoxButton {
+  width: 12.5rem;
+  padding: 5px 20px;
+  height: 2rem;
+  background-color: #d4bf00;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.catalogBoxTitle {
+  padding: 10px;
+}
+
+.table {
+  width: 100%;
+  height: 25rem;
+  margin: 0 auto;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table thead {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #286e16;
+}
+.table thead tr th {
+  color: #d4bf00;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.table tbody {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #344044;
+}
+
+.table tbody tr {
+  width: 100%;
+  padding: 10px;
+}
+
+.table tbody tr td {
+  padding-right: 10px;
+}

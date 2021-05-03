@@ -21,14 +21,18 @@ const CatalogItem: React.FC<CatalogItemProps> = ({ product }) => {
   }, [dispatch, product]);
 
   return (
-    <article>
-      <strong>{product.title}</strong> {" - "}
+    <article className="catalogBox">
+      <strong className="catalogBoxTitle">{product.title}</strong> {" - "}
       <span>{product.price}</span>{" "}
-      <button type="button" onClick={handleAddProductToCart}>
+      <button
+        type="button"
+        onClick={handleAddProductToCart}
+        className="catalogBoxButton"
+      >
         Comprar
       </button>
       {hasFailedStockCheck && (
-        <span style={{ color: "tomato" }}>Falta de Estoque</span>
+        <span style={{ color: "#ffae00" }}>Falta de Estoque</span>
       )}
     </article>
   );
